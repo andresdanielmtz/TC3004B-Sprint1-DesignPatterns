@@ -6,8 +6,11 @@ const sender= new TelegramSender();
 const db = Database.getInstance();
 
 const task1 = TaskFactory.createTask('Implementar navbar conmaterias',4,sender);
-
 const task2 = TaskFactory.createTask('Implementar login con Juv',10,sender);
+
+db.addTask(task1);
+db.addTask(task2);
+
 task1?.complete(5);
 task2?.complete(20);
 
